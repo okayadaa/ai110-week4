@@ -5,7 +5,10 @@
 **a. Initial design**
 
 - Briefly describe your initial UML design.
+My inital UML design will present the owner + pet info where the user inputs their name, pet's name, pet's age, and pet's breed. One method would be adding another pet if owner owns more than 1 pet. Then it has to-dos tasks where user inputs the pet care tasks, setup priorities, setting up time, and their availability. Lastly is including owner's day plan where after user creates a task it will generate a schedule. It will display top priorities, total duration, and the date. 
+
 - What classes did you include, and what responsibilities did you assign to each?
+I created 4 classes which is Owner, Pet info, To-dos, and Day plan. Owner class responsibilites is inputting owner's name and their availability. One method is addPet(). Pet info class responsibility is inputting pet's name, pet's age, and pet's breed. One method is getPetInfo(). To-dos class responsibility is inputting pet care tasks, priority, time, and availability. One method is setPriority(). Day plan class responsibility is date, taskList, and total duration. The two methods are displaySchedule() and sortByPriority(). 
 
 **b. Design changes**
 

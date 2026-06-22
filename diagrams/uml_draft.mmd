@@ -1,0 +1,34 @@
+classDiagram
+    class Owner {
+        +String name
+        +String availability
+        +addPet() void
+    }
+
+    class PetInfo {
+        +String name
+        +int age
+        +String breed
+        +getPetInfo() String
+    }
+
+    class ToDo {
+        +String task
+        +int priority
+        +String time
+        +String availability
+        +setPriority() void
+    }
+
+    class DayPlan {
+        +Date date
+        +List~ToDo~ taskList
+        +int totalDuration
+        +displaySchedule() void
+        +sortByPriority() void
+    }
+
+    Owner "1" --> "*" PetInfo : owns
+    Owner "1" --> "*" ToDo : has
+    Owner "1" --> "*" DayPlan : plans
+    DayPlan "1" o-- "*" ToDo : schedules
