@@ -44,15 +44,8 @@ pip install -r requirements.txt
 
 ## 🖥️ Sample Output
 
-Paste a sample of your app's CLI or Streamlit output here so a reader can see what a generated plan looks like:
+<img width="650" height="143" alt="Screenshot 2026-06-22 at 2 01 04 AM" src="https://github.com/user-attachments/assets/1c445e5b-a0bc-4d45-ae88-0fe0e226e978" />
 
-```
-# e.g.:
-# Daily plan for Biscuit (Golden Retriever):
-#   08:00 — Morning walk (30 min) [priority: high]
-#   09:00 — Feeding (10 min) [priority: high]
-#   ...
-```
 
 ## 🧪 Testing PawPal+
 
@@ -66,9 +59,8 @@ pytest --cov
 
 Sample test output:
 
-```
-# Paste your pytest output here
-```
+<img width="813" height="137" alt="Screenshot 2026-06-22 at 9 51 59 PM" src="https://github.com/user-attachments/assets/1f62d3e7-7b7c-4bf4-8929-cfe59d643e39" />
+
 
 ## 📐 Smarter Scheduling
 
@@ -76,19 +68,8 @@ Sample test output:
 
 | Feature | Method(s) | Notes |
 |---------|-----------|-------|
-| Task sorting | | e.g., by priority, duration |
-| Filtering | | e.g., skip tasks if time runs out |
-| Conflict handling | | e.g., overlapping time slots |
-| Recurring tasks | | e.g., daily vs. weekly |
+| Task sorting | DayPlan.sort_by_time() | Sorts tasks by scheduled time or priority; day plans are built in chronological order.|
+| Filtering | Scheduler.filter_tasks() | Filters by status and pet; excludes tasks for unregistered pets. Does not yet drop tasks when time runs out |
+| Conflict handling | task_schedule_conflicts() | Blocks tasks outside the owner’s availability window and overlapping time slots; raises AvailabilityError or ScheduleConflictError |
+| Recurring tasks | ToDo.recurring | Recurring tasks reset to pending after check-off |
 
-## 📸 Demo Walkthrough
-
-Describe your app in numbered steps so a reader can follow along without watching a video:
-
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
-
-**Screenshot or video** *(optional)*: <!-- Insert a screenshot or link to a demo video here -->
